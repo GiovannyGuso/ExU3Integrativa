@@ -3,44 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Galería God of War 1–5</title>
+  <title>ESPE PWA – Portal Informativo</title>
 
-  <!-- MDL CSS -->
-  <link
-    rel="stylesheet"
-    href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
-  />
-  <!-- Tus estilos -->
-  <link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/themes/light.css">
+  <script type="module"
+          src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/shoelace.js"></script>
+
+
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#004e98"/>
+  <link rel="icon" href="assets/icon-192.png" type="image/png"/>
+
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">God of War Saga</span>
-      </div>
-    </header>
 
-    <main class="mdl-layout__content">
-      <!-- HEADER DE LA GALERÍA -->
-      <section class="gallery-header">
-        <h1 class="mdl-typography--display-2 gallery-title">
-          Galería God of War 1–5
-        </h1>
-        <p class="mdl-typography--body-1 gallery-subtitle">
-          Recorre la épica evolución de Kratos desde su venganza contra Ares
-          hasta el Ragnarök.
-        </p>
+  <header class="topbar">
+    <div class="brand">
+      <sl-icon name="school"></sl-icon>
+      <span>Universidad de las Fuerzas Armadas – ESPE</span>
+    </div>
+
+
+    <sl-button id="installBtn" size="small" style="display:none">
+      <sl-icon slot="prefix" name="download"></sl-icon>
+      Instalar App
+    </sl-button>
+  </header>
+  <sl-tab-group placement="start" class="main-tabs">
+    <sl-tab slot="nav" panel="inicio" active>
+      <sl-icon name="house"></sl-icon>&nbsp;Inicio
+    </sl-tab>
+    <sl-tab slot="nav" panel="sobre">
+      <sl-icon name="info-circle"></sl-icon>&nbsp;Sobre la ESPE
+    </sl-tab>
+    <sl-tab slot="nav" panel="oferta">
+      <sl-icon name="book"></sl-icon>&nbsp;Oferta Académica
+    </sl-tab>
+    <sl-tab slot="nav" panel="admision">
+      <sl-icon name="clipboard-check"></sl-icon>&nbsp;Admisión
+    </sl-tab>
+    <sl-tab slot="nav" panel="contacto">
+      <sl-icon name="envelope"></sl-icon>&nbsp;Contacto
+    </sl-tab>
+
+    <sl-tab-panel name="inicio" active>
+      <section class="hero">
+        <h1>Bienvenido al portal informativo ESPE</h1>
+        <p style="align-items: center;">Explora historia, carreras, procesos y formas de contacto. PWA instalable y offline.</p>
+        <p>La institución se debe fundamentalmente a la sociedad y Fuerzas Armadas, a ellas orienta su esfuerzo, contribuyendo a la solución de sus necesidades de desarrollo, mediante la formación profesional, técnica y científica, la investigación, planteamiento e implementación de soluciones en el ámbito de sus dominios académicos. Con la búsqueda permanente de la excelencia como institución centenaria y referente en la sociedad, mediante la práctica de los principios: respeto por la dignidad humana, identidad ESPE, excelencia académica; y los valores: disciplina, integridad, liderazgo, creatividad, cohesión y efectividad, en todas sus actividades académicas y administrativas, aplicando métodos y herramientas efectivas para la integración de la docencia, investigación y vinculación con la sociedad.
+        La formación de profesionales se fundamenta en proyectos multidisciplinarios relacionados al paradigma “Smart University” que incluye el desarrollo de una universidad postmoderna con énfasis en la aplicación del gobierno electrónico (e-gobierno), internacionalización y modelo educativo innovador, tendiente a continuar como institución de educación superior de las Fuerzas Armadas, referente en el ámbito nacional e internacional.</p>
+        <sl-alert variant="primary" open>
+          <sl-icon slot="icon" name="bolt"></sl-icon>
+          <strong>PWA lista:</strong> instálala desde el botón superior y pruébala sin internet.
+        </sl-alert>
       </section>
+    </sl-tab-panel>
 
-      <!-- GALERÍA DE TARJETAS -->
-      <section id="gallery" class="mdl-grid gallery"></section>
-    </main>
-  </div>
+    <!-- SOBRE LA ESPE (Web Component #4: sl-details como acordeón) -->
+    <sl-tab-panel name="sobre">
+      <section class="content">
+        <sl-card class="info-card">
+          <h2 slot="header">Historia, Misión y Visión</h2>
+          <sl-details summary="Historia">
+            La Universidad de las Fuerzas Armadas ESPE tiene su origen cuando el 16 de junio de 1922 se crea la «Escuela de Oficiales de Ingenieros», mediante Decreto del Presidente de la República, Dr. José Luis Tamayo, publicado en el Registro Oficial 521; en vista de la necesidad de tecnificar los mandos en las especialidades de ingeniería y artillería el 22 de octubre de 1936, durante la Presidencia de Federico Páez, se cambia el nombre por «Escuela de Artillería e Ingenieros». Al ampliar su pensum académico y nivelarlo con las demás universidades ecuatorianas, en 1948 se la denominó Escuela Técnica de Ingenieros. Ante la crisis universitaria del país y las necesidades de las Fuerzas Armadas, en 1972 el Gral. Guillermo Rodríguez Lara, Presidente de la República abre las puertas para que ingresen estudiantes civiles.
 
-  <!-- MDL JS -->
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <!-- Tu script de galería -->
-  <script src="js/gallery.js"></script>
+            Debido al crecimiento de la población estudiantil se crean facultades, institutos y centros para atender las necesidades del país; por lo que en 1977 se transforma en Escuela Politécnica del Ejército (ESPE), su configuración y programas de estudios académicos fueron revisados por la H. Cámara Nacional de Representantes, que al dictar la Ley de Universidades y Escuelas Politécnicas en mayo de 1982 la incluyó con toda justicia y derecho, en la enumeración de centros de educación superior, méritos que se refuerzan al dictarse la Constitución Política el 10 de Agosto de 1998 y al promulgarse la Ley de Educación Superior en el Registro Oficial No. 77 del 15 de mayo del año 2000.
+
+          El 13 de junio del 2001, el señor Presidente Constitucional de la República, Dr. Gustavo Noboa aprueba el nuevo Estatuto de la Escuela Politécnica del Ejército, mediante Decreto Ejecutivo N° 1585, que se encuentra publicado en el Registro Oficial N° 349 del 18 de junio del 2001.
+
+          El decreto de creación ratificaba que los títulos concedidos por la ESPE se equiparaban con los otorgados por otras universidades y escuelas politécnicas. Paralelamente para satisfacer las necesidades de estudios de militares y sus familias se incluyeron las carreras a distancia en ciencias administrativas, mediante centros de apoyo que se abrieron en la gran mayoría de provincias del país. La población de estudiantes militares y civiles crecía considerablemente y de igual manera, el prestigio académico y la capacidad profesional de sus graduados; siendo en 1996 reconocida por el Consejo Nacional de Universidades y Escuelas Politécnicas (CONUEP).
+
+          Al entrar en vigencia la constitución aprobada por el pueblo ecuatoriano en el año 2008, la Asamblea Nacional dicta una nueva Ley de Educación Superior en la que se establece la transformación de la Escuela Politécnica del Ejército ESPE en Universidad Politécnica de Fuerzas Armadas “ESPE”.
+
+          En el 2010 es evaluada por el CONEA y se le otorga el Certificado de Acreditación Institucional reconociéndola en la categoría “A”.
+
+          Podemos observar cómo se genera la mayor transformación para esta casa de estudios; de acuerdo a la Disposición Transitoria Vigésima Segunda de la Ley Orgánica de Educación Superior (LOES) publicada en el Suplemento del Registro Oficial Nº 298 de 12 de octubre de 2010, se dispone que a partir de la vigencia de la ley, se integrarán la Escuela Politécnica del Ejército (ESPE), la Universidad Naval Comandante Rafael Morán Valverde (UNINAV) e Instituto Tecnológico Superior Aeronáutico (ITSA, para conformar la Universidad de las Fuerzas Armadas ESPE, una vez que el Consejo de Educación Superior (CES) aprueba el Estatuto, el 26 de junio de 2013.
+
+          En el 2016, el Consejo de Evaluación, Acreditación y Aseguramiento de la Calidad de la Educación Superior (CEAACES), mediante Resolución No. 388-CEAACES-SO-11-2016, determina ubicarle en la Categoría “A”.
+
+          En octubre del año 2020, la ESPE recibió el Certificado de Acreditación por parte del señor presidente del Consejo de Aseguramiento de la Calidad de Educación Superior (CACES), Juan Manuel García, PhD. Donde se alcanzó los parámetros de cumplimiento de los estándares y criterios establecidos en el modelo de evaluación, lo cual garantiza una educación de calidad para los estudiantes que se forman en la universidad.
+
+            La visión estratégica de la ESPE, se basa en la excelencia académica como instrumento esencial de la formación de sus estudiantes, sustentada en procesos de investigación científica, con parámetros de innovación, emprendimiento y ética de servicio a la nación. Estos factores han consolidado el posicionamiento de la Universidad de las Fuerzas Armadas ESPE a lo largo de estos 100 años de vida como una de las instituciones líderes en la educación superior del Ecuador
+          </sl-details>
+          <sl-details summary="Misión">
+            La Universidad de las Fuerzas Armadas-ESPE forma personas en el campo científico y tecnológico bajo un marco de principios y valores; y, genera  conocimiento transferible para contribuir al progreso del país y Fuerzas Armadas, a través de la docencia, investigación y vinculación con la sociedad.
+          </sl-details>
+          <sl-details summary="Visión">
+           Al 2025, ser reconocidos a nivel nacional e internacional como una institución de educación superior de calidad en docencia, investigación y vinculación bajo el paradigma de una universidad inteligente, articulando la transferencia de ciencia y tecnología, a través de procesos de I+D+i; y, convirtiéndonos en un referente de pensamiento en seguridad y defensa, al servicio del país y Fuerzas Armadas.
+          </sl-details>
+        </sl-card>
+      </section>
+    </sl-tab-panel>
+
+    <!-- OFERTA ACADÉMICA (Web Component #5: sl-card para cada carrera) -->
+    <sl-tab-panel name="oferta">
+      <section class="grid">
+        <sl-card class="career">
+          <h3 slot="header">Ingeniería en Software</h3>
+          Desarrollo de soluciones, arquitectura y PWA/Cloud.
+          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
+        </sl-card>
+        <sl-card class="career">
+          <h3 slot="header">Ingeniería Electrónica</h3>
+          Sistemas embebidos, control y telecomunicaciones.
+          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
+        </sl-card>
+        <sl-card class="career">
+          <h3 slot="header">Ingeniería Mecánica</h3>
+          Diseño, manufactura y mantenimiento industrial.
+          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
+        </sl-card>
+      </section>
+    </sl-tab-panel>
+
+    <!-- ADMISION -->
+    <sl-tab-panel name="admision">
+      <section class="content">
+        <sl-card class="info-card">
+          <h2 slot="header">Proceso de Admisión</h2>
+          <ol>
+            <li>Registro de cuenta y selección de carrera.</li>
+            <li>Requisitos y validación de documentos.</li>
+            <li>Evaluación/Examen o méritos.</li>
+            <li>Matrícula y bienvenida.</li>
+          </ol>
+          <sl-alert variant="success" open>
+            <sl-icon slot="icon" name="check2-circle"></sl-icon>
+            Consulta fechas oficiales en el sitio de admisiones.
+          </sl-alert>
+        </sl-card>
+      </section>
+    </sl-tab-panel>
+
+    <!-- CONTACTO (sl-input + sl-textarea + sl-button) -->
+    <sl-tab-panel name="contacto">
+      <section class="content">
+        <sl-card class="info-card">
+          <h2 slot="header">Contacto</h2>
+          <sl-input id="name" label="Nombre"></sl-input>
+          <sl-input id="email" type="email" label="Email"></sl-input>
+          <sl-textarea id="msg" label="Mensaje"></sl-textarea>
+          <div class="actions">
+            <sl-button id="sendBtn" variant="primary">
+              <sl-icon slot="prefix" name="send"></sl-icon>
+              Enviar
+            </sl-button>
+          </div>
+        </sl-card>
+      </section>
+    </sl-tab-panel>
+  </sl-tab-group>
+
+  <!-- Snackbar de feedback -->
+  <sl-alert id="toast" closable duration="2500"></sl-alert>
+
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>
