@@ -1,3 +1,4 @@
+
 const CACHE = 'espe-pwa-v1';
 const APP_SHELL = [
   './',
@@ -6,8 +7,11 @@ const APP_SHELL = [
   './js/app.js',
   './manifest.json',
   './assets/icon-192.png',
-  './assets/icon-512.png'
-  // No metemos el CDN aquí para no romper la instalación por CORS.
+  './assets/icon-512.png',
+  './assets/soft.pdf',
+  './assets/elec.pdf',
+  './assets/mec.pdf',
+
 ];
 
 // Install: cache del App Shell

@@ -55,7 +55,7 @@
         La formación de profesionales se fundamenta en proyectos multidisciplinarios relacionados al paradigma “Smart University” que incluye el desarrollo de una universidad postmoderna con énfasis en la aplicación del gobierno electrónico (e-gobierno), internacionalización y modelo educativo innovador, tendiente a continuar como institución de educación superior de las Fuerzas Armadas, referente en el ámbito nacional e internacional.</p>
         <sl-alert variant="primary" open>
           <sl-icon slot="icon" name="bolt"></sl-icon>
-          <strong>PWA lista:</strong> instálala desde el botón superior y pruébala sin internet.
+          <strong>PWA lista:</strong> La Universidad de las Fuerzas Armadas - ESPE es una institución de educación superior, que brinda servicios de calidad.
         </sl-alert>
       </section>
     </sl-tab-panel>
@@ -98,24 +98,35 @@
 
     <!-- OFERTA ACADÉMICA (Web Component #5: sl-card para cada carrera) -->
     <sl-tab-panel name="oferta">
-      <section class="grid">
-        <sl-card class="career">
-          <h3 slot="header">Ingeniería en Software</h3>
-          Desarrollo de soluciones, arquitectura y PWA/Cloud.
-          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
-        </sl-card>
-        <sl-card class="career">
-          <h3 slot="header">Ingeniería Electrónica</h3>
-          Sistemas embebidos, control y telecomunicaciones.
-          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
-        </sl-card>
-        <sl-card class="career">
-          <h3 slot="header">Ingeniería Mecánica</h3>
-          Diseño, manufactura y mantenimiento industrial.
-          <sl-button slot="footer" size="small" variant="primary">Ver malla</sl-button>
-        </sl-card>
-      </section>
-    </sl-tab-panel>
+  <section class="grid">
+    <sl-card class="career">
+      <h3 slot="header">Ingeniería en Software</h3>
+      Desarrollo de soluciones, arquitectura y PWA/Cloud.
+      <sl-button slot="footer" size="small" variant="primary"
+                 href="./assets/soft.pdf" target="_blank" rel="noopener">
+        Ver malla
+      </sl-button>
+    </sl-card>
+
+    <sl-card class="career">
+      <h3 slot="header">Ingeniería Electrónica</h3>
+      Sistemas embebidos, control y telecomunicaciones.
+      <sl-button slot="footer" size="small" variant="primary"
+                 href="./assets/elec.pdf" target="_blank" rel="noopener">
+        Ver malla
+      </sl-button>
+    </sl-card>
+
+    <sl-card class="career">
+      <h3 slot="header">Ingeniería Mecánica</h3>
+      Diseño, manufactura y mantenimiento industrial.
+      <sl-button slot="footer" size="small" variant="primary"
+                 href="./assets/mec.pdf" target="_blank" rel="noopener">
+        Ver malla
+      </sl-button>
+    </sl-card>
+  </section>
+</sl-tab-panel>
 
     <!-- ADMISION -->
     <sl-tab-panel name="admision">

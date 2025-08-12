@@ -1,4 +1,4 @@
-// Registro del Service Worker
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js')
@@ -7,7 +7,6 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Botón "Instalar App"
 let deferredPrompt = null;
 const installBtn = document.getElementById('installBtn');
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -23,7 +22,6 @@ installBtn?.addEventListener('click', async () => {
   installBtn.style.display = 'none';
 });
 
-// Enviar contacto simulado
 const toast = document.getElementById('toast');
 document.getElementById('sendBtn')?.addEventListener('click', () => {
   const name = document.getElementById('name')?.value?.trim();
