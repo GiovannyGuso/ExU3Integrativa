@@ -11,6 +11,7 @@ const APP_SHELL = [
   './assets/soft.pdf',
   './assets/elec.pdf',
   './assets/mec.pdf',
+  './assets/espe.jpg' 
 
 ];
 

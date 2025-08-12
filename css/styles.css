@@ -29,6 +29,17 @@ sl-tab[slot="nav"]{ padding:12px 16px; }
 .hero p{ 
   margin:0 0 16px; 
   color:#050608; }
+.hero-img{
+  width: min(100%, 980px);
+  max-height: 420px;          /* evita que crezca demasiado */
+  display: block;
+  margin: 16px auto 20px;     /* centrada y con aire */
+  border-radius: 14px;
+  object-fit: cover;          /* recorte elegante si no es 16:9 */
+  aspect-ratio: 16/9;         /* mantiene proporción visual */
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  outline: 3px solid #0b6b3a22; /* toque verde suave */
+}
 
 .content{ 
   max-width:900px;
